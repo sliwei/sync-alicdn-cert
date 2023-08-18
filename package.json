@@ -2,10 +2,10 @@
   "name": "sync-alicdn-cert",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/client.js",
+  "main": "dist/index.js",
   "scripts": {
     "prepare": "husky install",
-    "dev": "cross-env ACCESS_KEY_ID=xx ACCESS_KEY_SECRET=xx LETS_ENCRYPT_CERTS_PATH=./cert node dist/client.js",
+    "dev": "cross-env ACCESS_KEY_ID=xx ACCESS_KEY_SECRET=xx LETS_ENCRYPT_CERTS_PATH=./cert node dist/index.js",
     "build": "tsc"
   },
   "author": "",

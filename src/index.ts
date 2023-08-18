@@ -27,7 +27,7 @@ export default class Client {
     return new Cdn20180510(config)
   }
 
-  static readFile(filepath): string {
+  static readFile(filepath: number | fs.PathLike): string {
     return fs.readFileSync(filepath, { encoding: 'utf8' })
   }
 
@@ -38,7 +38,7 @@ export default class Client {
     const domainName = process.env['DOMAIN']
     const dirPath = path.join(process.env['LETS_ENCRYPT_CERTS_PATH'])
     const certId = parseInt(`${new Date().getTime() / 1000}`)
-    const certName = `${domainName}-${new Date().getFullYear()}-${new Date().getMonth()}`
+    const certName = `${domainName}-${new Date().getFullYear()}-${new Date().getMonth() + 1}`
     const map = {
       domainName,
       certType: 'upload',

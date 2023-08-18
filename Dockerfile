@@ -11,4 +11,4 @@ WORKDIR /www
 
 EXPOSE 3000
 
-CMD ["node", "dist/client.js"]
+CMD ["node", "dist/index.js"]
