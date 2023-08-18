@@ -1,0 +1,36 @@
+{
+  "name": "sync-alicdn-cert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/client.js",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "cross-env ACCESS_KEY_ID=xx ACCESS_KEY_SECRET=xx LETS_ENCRYPT_CERTS_PATH=./cert node dist/client.js",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^12.12.26",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "nyc": "^15.0.0",
+    "prettier": "^3.0.2",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@alicloud/cdn20180510": "2.1.0",
+    "@alicloud/openapi-client": "^0.4.4",
+    "@alicloud/tea-console": "^1.0.0",
+    "@alicloud/tea-typescript": "^1.7.1",
+    "@alicloud/tea-util": "^1.4.5"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}
