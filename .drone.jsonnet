@@ -60,12 +60,12 @@ local Pipe() = {
       "name": "docker build && up",
       "image": "appleboy/drone-ssh",
       "settings": {
-        "host": "bstu.cn",
-        "username": "root",
-        "password": {
-          "from_secret": "ssh_key"
-        },
-        "port": 22,
+        "host": "2024.bstu.cn",
+          "username": "root",
+          "key": {
+            "from_secret": "drone_id_rsa"
+          },
+          "port": 22,
         "command_timeout": "10m",
         "script_stop": false,
         "script": [
