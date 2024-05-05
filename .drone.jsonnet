@@ -61,11 +61,11 @@ local Pipe() = {
       "image": "appleboy/drone-ssh",
       "settings": {
         "host": "2024.bstu.cn",
-          "username": "root",
-          "key": {
-            "from_secret": "drone_id_rsa"
-          },
-          "port": 22,
+        "username": "root",
+        "key": {
+          "from_secret": "drone_id_rsa"
+        },
+        "port": 22,
         "command_timeout": "10m",
         "script_stop": false,
         "script": [
