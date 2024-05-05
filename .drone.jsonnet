@@ -1,6 +1,6 @@
 local Pipe() = {
   local NAME = "sync-alicdn-cert",
-  local APP_PATH = "/data/docker/tools/" + NAME,
+  local APP_PATH = "/data/docker/" + NAME,
   "kind": "pipeline",
   "type": "docker",
   "name": "deploy"+NAME,
