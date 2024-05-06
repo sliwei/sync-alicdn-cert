@@ -107,7 +107,7 @@ local Pipe() = {
     {
       "name": "cache",
       "host": {
-        "path": "/tmp/cache"
+        "path": "/tmp/cache/"+NAME
       }
     }
   ]
