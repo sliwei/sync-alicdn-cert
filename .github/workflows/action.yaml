@@ -49,5 +49,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            whoami
-            ls -al
+            cd /data/docker/nginxproxymanager
+            docker pull registry.cn-shenzhen.aliyuncs.com/sliwei/nginxproxymanager-sync-alicdn-cert:1.0.0
+            docker compose up -d
