@@ -1,11 +1,16 @@
 services:
-  sync-alicdn-cert:
-    container_name: sync-alicdn-cert
-    image: sync-alicdn-cert
+  nginxproxymanager-sync-alicdn-cert:
+    container_name: nginxproxymanager-sync-alicdn-cert
+    image: nginxproxymanager-sync-alicdn-cert
     environment:
-      - ACCESS_KEY_ID=xxx
-      - ACCESS_KEY_SECRET=xxx
-      - DOMAIN=xxx
-      - LETS_ENCRYPT_CERTS_PATH=/cert
+      - ACCESS_KEY_ID=xxx # 阿里云 Access Key ID
+      - ACCESS_KEY_SECRET=xxx # 阿里云 Access Key Secret
+      - CDN_DOMAIN=xxx # CDN 域名 如 i.xxx.com
+      - NPM_DOMAIN_NAMES=xxx # Nginx Proxy Manager 生成证书的域，如果要上传什么证书，就填这个证书的域，命中一个即可
+      - NPM_IDENTITY=xxx # Nginx Proxy Manager 账号
+      - NPM_SECRET=xxx # Nginx Proxy Manager 密码
+      - NPM_UI=xxx # Nginx Proxy Manager UI 地址
+      - LETS_ENCRYPT_CERTS_PATH=/cert # 证书存放路径，与volumes一直，上传时取 /cert/npm-xxx/cert.pem
     volumes:
-      - /data/ssl/xxx:/cert:ro
+      # 将live路径映射到/cert
+      - /data/docker/nginxproxymanager/letsencrypt/live:/cert:ro
