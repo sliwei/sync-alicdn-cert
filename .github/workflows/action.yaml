@@ -5,7 +5,7 @@ on:
     branches:
       - nginxproxymanager-sync-alicdn-cert
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '20 * * * *'
 
 jobs:
   build:
