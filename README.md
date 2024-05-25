@@ -1,5 +1,7 @@
 # 简介
 
+[![deploy](https://github.com/sliwei/[blog-serve](package.json)/actions/workflows/action.yaml/badge.svg)](https://github.com/sliwei/[blog-serve](package.json)/actions/workflows/action.yaml)
+
 - letsencrypt证书自动更新阿里云cdn
 - 单域名
 - 只执行一次
